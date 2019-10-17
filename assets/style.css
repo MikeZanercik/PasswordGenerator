@@ -1,0 +1,15 @@
+header{
+    text-align: center;
+    display: block;
+    border-bottom: solid grey 2px;
+    padding: 2%;
+}
+h3{
+    text-align: center;
+}
+.card{
+    margin: 5% 25% 5% 25%;
+    padding: 5% 0% 5% 0%;
+    text-align: center;
+    width: 50%;
+}

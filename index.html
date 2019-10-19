@@ -13,8 +13,26 @@
 
 <body>
     <script>
-        alert("test")
+        var passwordLength = prompt("How long would you like your password to be 'Please enter between 8 and 128'");
+        // // var sChar = prompt("Please choose a special character");
+        // // var nChar = prompt("Please choose a number");
+        // // var lChar = prompt("Please choose a lowercase letter");
+        // // var iChar = prompt("Please choose an uppercase letter");
+        var passwordValue = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!#$%&*+,-./:;<>=?@[]^_`\|/~"
+        var password= "";
+
+        for(var i = 0; i <= passwordLength; i++){
+        password = password + passwordValue.charAt(Math.floor(Math.random()*Math.floor(passwordLength.length*10)));
+        }
+
+        console.log(password);
+
+        
     </script>
+
+
+
+
     <header>
         <h1>Password Generator</h1>
     </header>
@@ -29,7 +47,7 @@
 
 
 
-    <!---JavaScript Link-->
+    <!---Bootstrap JavaScript Link-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>

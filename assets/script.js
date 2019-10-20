@@ -1,26 +1,28 @@
 
-        var charAll = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&*+,-./:;<>=?@[]^_`\|/~"
-        var passwordLength = prompt("How long would you like your password to be 'Please enter between 8 and 128'");
-        var sChar = prompt("Please choose a special character");
-        var nChar = prompt("Please choose a number");
-        var lChar = prompt("Please choose a lowercase letter");
-        var uChar = prompt("Please choose an uppercase letter");
-        var yourPassword= " ";
+        // var charAll = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&*+,-./:;<>=?@[]^_`\|/~"
+        // var passwordLength = prompt("How long would you like your password to be 'Please enter between 8 and 128'");
+        // var sChar = prompt("Please choose a special character");
+        // var nChar = prompt("Please choose a number");
+        // var lChar = prompt("Please choose a lowercase letter");
+        // var uChar = prompt("Please choose an uppercase letter");
+        // var yourPassword= " ";
 
-        yourPassword.value = password(passwordLength.value, characters);
+        // // var yourChar = [sChar, nChar, lChar, uChar]
+        // // console.log(yourChar);
 
-        var characters = charAll + sChar + nChar + lChar + uChar;
-        console.log(characters);
+        // // console.log(password(passwordLength, yourChar, charAll));
 
-        console.log(password(passwordLength,charAll));
+        // function password(){
+        //     for(var i = 0; i < passwordLength; i++){
+        //         password = password + charAll.charAt(Math.floor(Math.random()*Math.floor(charAll.length)));
+        //         }
+        //     }
+            
+        //  if (password.includes(sChar && nChar && lChar && uChar)){
+        // console.log(password);
+        //   }
 
-        function password(length, characters){
-            var pW = " ";
-            for(var i = 0; i<passwordLength; i++){
-                pW += characters.charAt(Math.floor(Math.random() * length.length));
-            }
-            return pW;
-        }
+
 
 
 
@@ -28,28 +30,27 @@
 
         // <!--first try-->
 
-        // var passwordLength = prompt("How long would you like your password to be 'Please enter between 8 and 128'");
-        // var sChar = prompt("Please choose a special character");
-        // var nChar = prompt("Please choose a number");
-        // var lChar = prompt("Please choose a lowercase letter");
-        // var uChar = prompt("Please choose an uppercase letter");
-        // var passwordValue = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!#$%&*+,-./:;<>=?@[]^_`\|/~"
-        // var password= "";
+        var passwordLength = prompt("How long would you like your password to be 'Please enter between 8 and 128'");
+        var sChar = prompt("Please choose a special character");
+        var nChar = prompt("Please choose a number");
+        var lChar = prompt("Please choose a lowercase letter");
+        var uChar = prompt("Please choose an uppercase letter");
+        var passwordValue = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!#$%&*+,-./:;<>=?@[]^_`\|/~"
+        var password= "";
 
         // var passReq=[passwordLength, sChar, nChar, lChar, uChar];
         // console.log(passReq);
 
+        for(var i = 0; i <= passwordLength; i++){
+        password = password + passwordValue.charAt(Math.floor(Math.random()*Math.floor(passwordValue.length)));
+        }
+        var goodPW = password.includes(sChar && nChar && lChar && uChar)
+        console.log(goodPW);
         
-
-        // for(var i = 0; i <= passwordLength; i++){
-        // password = password + passwordValue.charAt(Math.floor(Math.random()*Math.floor(passwordValue.length)));
-        // }
-
-        // // if (password.includes(sChar && nChar && lChar && uChar)){
-        // console.log(password);
-        // //  }
-
-        // // else (for (var i))
+        //  else ()
+        //  for(var i = 0; i <= passwordLength; i++){
+        //     password = password + passwordValue.charAt(Math.floor(Math.random()*Math.floor(passwordValue.length)));
+        //     }
 
 
         //     <!--Test code-->

@@ -12,34 +12,6 @@
 </head>
 
 <body>
-    <script>
-        var passwordLength = prompt("How long would you like your password to be 'Please enter between 8 and 128'");
-        var sChar = prompt("Please choose a special character");
-        var nChar = prompt("Please choose a number");
-        var lChar = prompt("Please choose a lowercase letter");
-        var uChar = prompt("Please choose an uppercase letter");
-        var passwordValue = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!#$%&*+,-./:;<>=?@[]^_`\|/~"
-        var password= "";
-
-        for(var i = 0; i <= passwordLength; i++){
-        password = password + passwordValue.charAt(Math.floor(Math.random()*Math.floor(passwordValue.length)));
-        }
-
-        if (password.includes(sChar && nChar && lChar && uChar)){
-        console.log(password);
-        }
-
-        // var test = "4!2Ea@F3#Hd4T$fS5kV%6sTr^7HbgD&BG8sSGF*9v"
-        // console.log(test.charAt(Math.floor(Math.random()*Math.floor(test.length))));
-
-       
-
-        
-    </script>
-
-
-
-
     <header>
         <h1>Password Generator</h1>
     </header>
@@ -64,6 +36,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script src="../PasswordGenerator/assets/script.js"></script>
 </body>
 
 </html>

@@ -22,61 +22,47 @@ function getPasswordOptions() {
     }
     return options
 };
-function RandomNumber (bottom, top) {
-    var diff = (top - bottom) + 1;
-    return Math.floor(Math.random()* diff)+ bottom;
-}
+
 function RandomItemInArray(arr){
     return arr[Math.floor(Math.random()*arr.length)]
 }
-function ShuffleArray(arr){
-    for(var i = 0; i < arr.length; i++){
-        var randomIndex = Math.floor(Math.random()*arr.length);
-        var tempValOne = arr[i];
-        var tempValTwo = arr[randomIndex];
-        arr[i] = tempValTwo;
-        arr[randomIndex]= tempValOne;
-    }
-    return arr
-}
+
 function generatePassword(){
     var finalPassword = [];
     var possibleCharacters= [];
     var options = getPasswordOptions();
     if (options.sChar){
-        var randomsChar = RandomNumber(33, 47);
-        finalPassword.push(randomsChar)
-        for (var i =33; i<=47;i++){
-            possibleCharacters.push(i)
+        var randomsChar = ["!", "#", "$", "%", "&", "'", "*", "+" ];
+        possibleCharacters.push(randomsChar)
+        for (var i =0; i<=randomsChar.length;i++){
+            finalPassword.push(i)
         }
     }
     if (options.nChar){
-        var randomnChar = RandomNumber(48, 57);
-        finalPassword.push(randomnChar)
-        for (var i = 48; i<= 57; i++){
-            possibleCharacters.push(i)
+        var randomnChar = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+        possibleCharacters.push(randomnChar)
+        for (var i = 0; i<=randomnChar.length; i++){
+            finalPassword.push(i)
         }
     }
     if (options.lChar){
-        var randomlChar = RandomNumber(97, 122);
-        finalPassword.push(randomlChar)
-        for (var i = 97; i<= 122; i++){
-            possibleCharacters.push(i)
+        var randomlChar = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+        possibleCharacters.push(randomlChar)
+        for (var i = 0; i<=randomlChar.length; i++){
+            finalPassword.push(i)
         }
     }
     if (options.uChar){
-        var randomuChar = RandomNumber(65, 90);
-        finalPassword.push(randomuChar)
-        for (var i = 65; i<= 90; i++){
-            possibleCharacters.push(i)
+        var randomuChar = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+        possibleCharacters.push(randomuChar)
+        for (var i = 0; i<= randomuChar.length; i++){
+            finalPassword.push(i)
         }
     }
-    for(var i = finalPassword.length; i < options.length; i++){
+    for(var i = 0; i < options.length; i++){
         var randomChar = RandomItemInArray(possibleCharacters);
         finalPassword.push(randomChar)
+        return (finalPassword)
     }
-    for(var i =0; i < finalPassword.length; i++){
-        finalPassword[i] = string.fromCharCode(finalPassword[i]);
     }
-    return ShuffleArray(finalPassword).join("")
-}
+

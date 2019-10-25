@@ -46,7 +46,6 @@ function  characters(){
     }
 }
 
-
 function generatePassword(){
     var finalPassword = "";
     passwordlength = parseInt(passwordLength)
@@ -54,7 +53,6 @@ function generatePassword(){
         var whichArray = Math.floor(Math.random()*passArr.length)
         finalPassword += passArr[whichArray][Math.floor(Math.random()*passArr[whichArray].length)]
     }
-    console.log(finalPassword)
     document.getElementById("password").innerText = finalPassword;
 }
 
